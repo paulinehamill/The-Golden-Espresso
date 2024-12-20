@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name= "description" content= "The Golden Espresso is a vibrant coffee truck serving specialty coffee, acai bowls & sweet treats. Why not check out our menu, or swing by for a visit!" >
+<meta name= "viewport" content= "width=device-width, initial-scale= 1">
+<meta charset="UTF-8">
+
+<link rel= "stylesheet" href= "Style.css">
+
+<title> The Golden Espresso | Where You Can Explore Our Specialty Coffees & Treats! </title>
+
+
+
+<style>
+img {
+display:inline-block;
+margin:40px;
+}
+
+.contact-section {
+text-align: center;
+}
+
+.contact-form button {
+border: none;
+border-radius: 5px;
+color: #FFFAF5;
+background-color: #8B4513;
+padding: 14px 28px;
+cursor: pointer;
+width: auto;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h2> The Golden Espresso </h2>
+<nav>
+<ul>
+<li> <a href="Hot.html"> Hot Drinks </a> </li>
+<li> <a href= "Cold.html"> Cold Drinks </a> </li>
+<li> <a href= "Acai.html"> Acai Bowls </a> </li>
+<li> <a href= "Sweet.html"> Sweet Treats </a> </li> 
+</ul>
+</nav>
+</header>
+
+<main>
+
+<h1> Our Story </h1>
+<p> Welcome to The Golden Espresso, your newest go-to spot for delicious coffee & treats! We serve a variety of hot and iced beverages, irresistable cakes  & flavour-packed acai bowls to brighten your day. Whether you're craving the perfect morning brew or something sweet, we've got you covered! Come pay us a visit and treat yourself!</p>
+<br></br>
+<p> The Golden Espresso started with a simple idea: to share our passion for great tasting coffee and even better tasting treats. What began as a dream quickly became a reality, as we kickstarted our little coffee truck in 2022 in Trim, Co.Meath. From day one the mission has been to create a space where people can enjoy delicious coffee and food on the go. We wanted our customers to feel a warm sense of community every time they visited. Fast-forward to today, and we've done just that. We've grown not only our menu, but also a community of loyal customers. We've worked tirelessly to ensure that each creation that we serve is crafted with care, using only the highest quality of ingredients. Fueled by a passion for delivering quality, we're proud to be open 7 days a week to satisfy caffeine addicts & sweet tooths alike! <p>
+<br></br>
+<p> Our journey has been one of learning, improving and bringing joy to our customers' faces. So pop by - we would love to see you! </p>
+<br></br>
+
+<img src="Truck.jpg" alt="Our Coffee Truck" width=80% style="display: block; margin: 0 auto;">
+<br></br>
+<img src= "Acai1.jpg" alt="Our Acai Bowls" height=400px>
+<img src= "Latteart.jpg" alt = "Our Coffee" height=400px>
+<br></br>
+<h2> Find Us On Google Maps </h2>
+<div id="map" style="height: 450px; width: 100%;"></div>
+<script>
+function myMap() {
+var mapProp= {
+center:new google.maps.LatLng(53.562190,-6.767951),
+zoom:18,
+};
+
+var map= new google.maps.Map(document.getElementById("map"), mapProp);
+
+var marker = new google.maps.Marker({
+position: mapProp.center,
+map: map,
+title: "The Golden Espresso",
+});
+}
+</script>
+<script src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyCLzXynt7FxqKXy5G2ExKeF0eePrsR6fxM&callback=myMap">
+
+function submitForm() {
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var message = document.getElementById("message").value;
+
+if (name && email && message) {
+alert(`Thank you for your message, ${name}! We will get back to you as soon as possible.`);
+document.getElementById("contactForm").reset();
+} else {
+alert("Please fill out all fields before submitting.");
+}
+
+}
+</script>
+</main>
+
+
+<br></br>
+<div class= "contact-section">
+<h2> Contact Us </h2>
+<form class= "contact-form" id= "contactForm">
+<label for= "name">Name</label>
+<input type= "text" id= "name" name="name" placeholder= "Your Name" required>
+<br></br>
+<label for= "email">Email</label>
+<input type= "email" id= "email" name= "email" placeholder= "Your Email" required>
+<br></br>
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="6" placeholder= "Your Message" required></textarea>
+<br></br>
+<button type= "button" onclick="submitForm()">Submit</button>
+</form>
+</div>
+</body>
+
+<br></br>
+<footer>
+<h4> Our Opening Hours </h4>
+<ul>
+<li><strong> Mon-Fri:</strong> 7AM - 2PM </li>
+<li><strong>Sat-Sun:</strong> 8AM - 3PM </li>
+</ul>
+</footer>
+
+
+
+ 
+</html>

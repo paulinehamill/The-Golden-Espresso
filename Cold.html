@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name= "description" content= "The Golden Espresso Menu includes a variety of Iced Drinks. Whether you need your daily coffee fix, or simply something refreshing to satisfy your sweet tooth, we've got something for everyone!" >
+<meta name= "viewport" content= "width=device-width, initial-scale= 1">
+<link rel= "stylesheet" href= "Style.css">
+<title> The Golden Espresso | Cold Drinks Menu & Customization Options." </title>
+
+
+<style>
+.image-container {
+display: inline-block;
+margin: 65px;
+text-align:center;
+}
+
+.clickable-image {
+max-width: 250px;
+height: 250px;
+border-radius: 10px;
+cursor:pointer;
+}
+
+
+table {
+margin: 0 auto;
+border-collapse: collapse;
+max-width: 600px ;
+font-size: 20px;
+text-align: center;
+}
+
+
+table th, table td {
+padding: 15px;
+height: 30px;
+border: 3px solid black;
+font-weight: bold;
+}
+
+table th {
+background-color:#8B4513;
+color:#FFFAF5;
+}
+
+
+
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+
+<header>
+<h2> The Golden Espresso </h2>
+<nav>
+<ul>
+<li> <a href="index.html"> Homepage </a> </li>
+<li> <a href= "Hot.html"> Hot Drinks </a> </li>
+<li> <a href= "Acai.html"> Acai Bowls </a> </li>
+<li> <a href= "Sweet.html"> Sweet Treats </a> </li> 
+</ul>
+</nav>
+</header>
+
+<main>
+<h1> Our Cold Drinks Selection </h1>
+<p>The Golden Espresso Menu includes a variety of iced drinks, including Iced Americanos, Iced Lattes and Iced Chai Lattes. Whether you need your daily coffee fix, or simply something refreshing to satisfy your sweet tooth, we've got something for everyone! </p>
+<br></br>
+<p> Click on each image to find out more! </p>
+
+<div class="image-container" data-description="A bold, yet refreshing coffee made with espresso & cold water over ice. May be enjoyed with a splash of milk, or simply as it comes. ">
+<img src= "IcedAmericano.jpg" alt="Iced Americano" class="clickable-image">
+<h3> Iced Americano</h3>
+</div>
+
+<div class="image-container" data-description="A popular, creamy iced coffee that combines espresso & cold milk over ice. Typically paired with a dash of caramel, vanilla or hazelnut.">
+<img src= "IcedLatte.jpg" alt="Iced Latte" class="clickable-image">
+<h3> Iced Latte </h3>
+</div>
+
+<div class="image-container" data-description="A refreshing blend of japanese spices and cold milk over ice. Espresso can be added to this sweet & flavourful drink to satisfy the caffeine addicts.">
+<img src= "IcedChai.jpg" alt="Iced Chai" class="clickable-image">
+<h3> Iced Chai Latte </h3>
+</div>
+
+
+<div id="info-box" class="modal">
+<div class="modal-content">
+<p id= "modal-description"> </p>
+</div>
+</div>
+</main>
+
+<script>
+
+var images= document.querySelectorAll(".clickable-image");
+var modal= document.getElementById("info-box");
+var modalDescription = document.getElementById("modal-description");
+
+images.forEach(image => {
+var container = image.parentElement;
+var description= container.getAttribute("data-description");
+
+image.addEventListener("click", () => {
+alert(description);
+});
+});
+
+</script>
+<h2>Customize Your Drink!</h2>
+<table>
+<tr>
+<th> Syrups </th>
+<th>Alternative Milks</th>
+</tr>
+<tr>
+<td> Caramel </td>
+<td> Oat</td>
+</tr>
+<td> Vanilla </td>
+<td> Coconut </td>
+</tr>
+<tr>
+<td> Hazelnut </td>
+<td> Almond </td>
+</tr>
+</table>
+
+<br></br>
+<h2> Watch How We Make Our Iced Latte!</h2>
+<br></br>
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8ipCeDjgiD4?si=5196KzH729eQBXt1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<br></br>
+<footer>
+<h4> Our Opening Hours </h4>
+<ul>
+<li><strong> Mon-Fri:</strong> 7AM - 2PM </li>
+<li><strong>Sat-Sun:</strong> 8AM - 3PM </li>
+</ul>
+</footer>
+
+
+</body>
+
+
+
+
+
+
+
+</html>

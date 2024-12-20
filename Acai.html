@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+<meta name= "description" content= "Explore delicious Acai Bowls at The Golden Espresso. We build our bowls by combining our refreshing acai base & crunchy granola with the toppings of your choice. " >
+<meta name= "viewport" content= "width=device-width, initial-scale= 1">
+<link rel= "stylesheet" href= "Style.css">
+<title> The Golden Espresso | Learn How to Build Your Customized Acai Bowl. </title>
+
+
+<style>
+img {
+display: inline-block;
+margin: 60px;
+max-width: 50%;
+height: 250px;
+border-radius: 10px;
+}
+
+.button-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+button {
+border: none;
+border-radius: 5px;
+color: #FFFAF5;
+background-color: #8B4513;
+padding: 14px 28px;
+cursor: pointer;
+width: auto;
+}
+
+div.scroll-container {
+overflow: auto;
+white-space: nowrap;
+}
+
+div.scroll-container img {
+height: 450px;
+width: auto;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h2> The Golden Espresso </h2>
+<nav>
+<ul>
+<li> <a href="index.html"> Homepage </a> </li>
+<li> <a href= "Hot.html"> Hot Drinks </a> </li>
+<li> <a href= "Cold.html"> Cold Drinks </a> </li>
+<li> <a href= "Sweet.html"> Sweet Treats </a> </li> 
+</ul>
+</nav>
+</header>
+
+<main>
+<h1> Building Your Acai Bowl </h1>
+<p> Customising your refreshing acai bowl exactly how you like it couldn't be easier at The Golden Espresso. Our acai bowls come in two sizes: Regular & Large and we provide a wide variety of delicious toppings to create your perfect bowl.</p>
+<br></br>
+
+<h2> Each Bowl Comes With Our Acai Base & Granola</h2>
+<br></br>
+<img src="Base.jpg" alt="Acai Base" style="width:400px; height:400px">
+<img src="Granola.jpg" alt="Granola" style="width:400px; height:400px">
+
+<br></br>
+<h2> Choose Your Toppings </h2>
+<br></br>
+<p>Click On Your Preferred Size</p>
+<div class="button-container">
+<button onclick= "showRegular()"> Regular Size</button>
+<p id= "regular"></p>
+<button onclick= "showLarge()"> Large Size </button>
+<p id="large"></p>
+</div>
+<script>
+function showRegular() {
+document.getElementById("regular").innerHTML= "Select up to 4 toppings!";
+}
+function showLarge() {
+document.getElementById("large").innerHTML="Select up to 6 toppings!";
+}
+
+</script>
+<br></br>
+
+
+
+<img src="Strawberry.jpg" alt= "Strawberries">
+<img src="Banana.jpg" alt="Bananas">
+<img src= "Kiwi.jpg" alt="Kiwi">
+<br></br>
+
+<img src="Blueberry.jpg" alt="Blueberries">
+<img src= "Raspberry.jpg" alt="Raspberries">
+<img src="Coconut.jpg" alt="Coconut">
+<br></br>
+
+<img src="Chocolate.jpg" alt="Chocolate Chips">
+<img src="Nutella.jpg" alt="Nutella">
+<img src="Peanut.jpg" alt="Peanut Butter">
+
+
+<h2> Take a Look at Some of Our Favourite Acai Bowl Creations! </h2>
+<br></br>
+<div class="video-container">
+<iframe width="560" height="315" src="https://youtube.com/embed/RzTwczABkYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<br></br>
+<div class= "scroll-container">
+<img src="Acai2.jpg" alt="Acai Bowls">
+<img src="Acai3.jpg" alt="Acai Bowls">
+<img src="Acai4.jpg" alt="Acai Bowls">
+<img src="Acai5.jpg" alt="Acai Bowls">
+</div>
+
+</main>
+</body>
+
+<br></br>
+<footer>
+<h4> Our Opening Hours </h4>
+<ul>
+<li><strong> Mon-Fri:</strong> 7AM - 2PM </li>
+<li><strong>Sat-Sun:</strong> 8AM - 3PM </li>
+</ul>
+
+</footer>
+
+
+</html>

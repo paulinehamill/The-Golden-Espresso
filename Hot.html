@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name= "description" content= "The Golden Espresso serves a wide range of specialty hot drinks. From bold espressos to creamy lattes and our signature hot chocolates, we're here to keep you fueled with every sip." >
+<meta name= "viewport" content= "width=device-width, initial-scale= 1">
+<link rel= "stylesheet" href= "Style.css">
+<title> The Golden Espresso | Hot Coffee & Specialty Drinks Menu - </title>
+
+
+
+<style>
+.image-container {
+display: inline-block;
+margin: 65px;
+text-align:center;
+}
+
+.clickable-image {
+max-width: 250px;
+height: 250px;
+border-radius: 10px;
+cursor: pointer;
+}
+
+
+
+table {
+margin: 0 auto;
+border-collapse: collapse;
+max-width: 600px ;
+font-size: 20px;
+text-align: center;
+}
+
+
+table th, table td {
+padding: 15px;
+height: 30px;
+border: 3px solid black;
+font-weight:bold;
+}
+
+table th {
+background-color:#8B4513;
+color:#FFFAF5;
+}
+
+</style>
+
+
+
+
+
+</head>
+<body>
+
+<header>
+<h2> The Golden Espresso </h2>
+<nav>
+<ul>
+<li> <a href="index.html"> Homepage </a> </li>
+<li> <a href= "Cold.html"> Cold Drinks </a> </li>
+<li> <a href= "Acai.html"> Acai Bowls </a> </li>
+<li> <a href= "Sweet.html"> Sweet Treats </a> </li> 
+</ul>
+</nav>
+</header>
+
+<main>
+<h1> Our Hot Drinks Selection </h1>
+<p> The Golden Espresso serves a wide range of specialty hot coffees. From bold espressos to creamy lattes and our signature hot chocolates, we're here to keep you fueled with every sip.</p>
+<br></br>
+<p> Click on each image to find out more! </p>
+
+<div class="image-container" data-description="A smooth, rich blend of freshly brewed espresso and hot water. Can be enjoyed with milk or as it is.">
+<img src= "Americano.jpg" alt="Americano" class="clickable-image">
+<h3> Americano</h3>
+</div>
+
+<div class="image-container" data-description="Steamed milk combined with espresso. This drink is creamy and has a small layer of foam.">
+<img src= "Latte.jpg" alt="Latte" class="clickable-image">
+<h3> Latte </h3>
+</div>
+
+<div class="image-container" data-description="Equal parts espresso, steamed milk and foam. May be enjoyed with a layer of chocolate dusting on top.">
+<img src= "Cappucino.jpg" alt="Cappucino" class="clickable-image">
+<h3> Cappucino</h3>
+</div>
+
+<div class="image-container" data-description="A delicious combination of espresso and velvety steamed milk. This coffee is stronger than the Cappucino and Latte, and comes in our smaller 7 ounce cup.">
+<img src= "FlatWhite.jpg" alt="Flat White" class="clickable-image">
+<h3> Flat White </h3>
+</div>
+
+
+<div class="image-container" data-description="Our intense, flavourful espresso is brewed to perfection and may be served as a single or double. This concentrated coffee can be enjoyed with a splash of milk or hot water, or simply on its own. ">
+<img src= "Espresso.jpg" alt="Espresso" class="clickable-image">
+<h3>Espresso </h3>
+</div>
+
+<div class="image-container" data-description="A comforting, chocolatey treat, made expertly with melted chocolate and steamed milk. May be enjoyed with with our mini marshmellows.">
+<img src= "HotChocolate.jpg" alt="Hot Chocolate" class="clickable-image">
+<h3> Hot Chocolate</h3>
+</div>
+<br></br>
+
+<div class="image-container" data-description="A delicious, classic tea that is typically enjoyed with a splash of milk. ">
+<img src= "Tea.jpg" alt="Tea" class="clickable-image">
+<h3> Breakfast Tea </h3>
+</div>
+
+<div class="image-container" data-description="This light & relaxing tea is known for its earthy taste and numerous health benefits. ">
+<img src= "GreenTea.jpg" alt="Green Tea" class="clickable-image">
+<h3> Green Tea </h3>
+</div>
+
+<div class="image-container" data-description="Smooth, steamed milk combined with rich mix of japanese spices. Can be enjoyed with or without coffee.">
+<img src= "Chai.jpg" alt="Chai Latte" class="clickable-image">
+<h3> Chai Latte</h3>
+</div>
+
+<div id="info-box" class="modal">
+<div class="modal-content">
+<p id= "modal-description"> </p>
+</div>
+</div>
+</main>
+
+<script>
+
+var images= document.querySelectorAll(".clickable-image");
+var modal= document.getElementById("info-box");
+var modalDescription = document.getElementById("modal-description");
+
+images.forEach(image => {
+var container = image.parentElement;
+var description= container.getAttribute("data-description");
+
+image.addEventListener("click", () => {
+alert(description);
+});
+});
+
+</script>
+<br></br>
+<h2> Customize Your Drink!</h2>
+
+<table>
+<tr>
+<th> Syrups </th>
+<th>Alternative Milks</th>
+</tr>
+<tr>
+<td> Caramel </td>
+<td> Oat</td>
+</tr>
+<td> Vanilla </td>
+<td> Coconut </td>
+</tr>
+<tr>
+<td> Hazelnut </td>
+<td> Almond </td>
+</tr>
+</table>
+
+
+</body>
+
+<br></br>
+<footer>
+<h4> Our Opening Hours </h4>
+<ul>
+<li><strong> Mon-Fri:</strong> 7AM - 2PM </li>
+<li><strong>Sat-Sun:</strong> 8AM - 3PM </li>
+</ul>
+</footer>
+
+
+
+
+
+
+</html>

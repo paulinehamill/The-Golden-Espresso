@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name= "description" content= "The Golden Espresso serves a variety of flavourful treats, ranging from fudgy Chocolate Brownies to zesty Lemon Drizzle Cake. No matter what you're craving, we've got you sorted." >
+<meta name= "viewport" content= "width=device-width, initial-scale= 1">
+
+<link rel= "stylesheet" href= "Style.css">
+
+<title> The Golden Espresso | Sweet Treats Menu & Desserts You'll Love</title>
+
+<style>
+.image-container {
+display: inline-block;
+margin: 65px;
+text-align:center;
+}
+
+.clickable-image {
+max-width: 250px;
+height: 250px;
+border-radius: 10px;
+cursor:pointer;
+}
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+
+<header>
+<h2> The Golden Espresso </h2>
+<nav>
+<ul>
+<li> <a href="index.html"> Homepage </a> </li>
+<li> <a href= "Hot.html"> Hot Drinks </a> </li>
+<li> <a href= "Cold.html"> Cold Drinks</a> </li>
+<li> <a href= "Acai.html"> Acai Bowls </a> </li> 
+</ul>
+</nav>
+</header>
+
+<main>
+<h1> Our Sweet Treats Selection </h1>
+<p>Explore our selection of freshly-baked cakes & pastries. No matter what you're craving, we've got you sorted. </p>
+<br></br>
+<p> Click on each image to find out more! </p>
+
+<div class="image-container" data-description="A delicious, fudgy treat that contains dark, white & milk chocolate chips!">
+<img src= "Brownie.jpg" alt="Brownie" class="clickable-image">
+<h3> Brownie </h3>
+</div>
+
+<div class="image-container" data-description="This fan-favourite treat has the perfect balance of chewiness and crispiness that leaves everyone coming back for more! Contains delightful milk chocolate chips.">
+<img src= "Cookie.jpg" alt="Cookie" class="clickable-image">
+<h3> Cookie </h3>
+</div>
+
+<div class="image-container" data-description="A buttery, flaky pastry are a classic favourite and can be enjoyed warmed up with some butter and jam.">
+<img src= "Croissant.jpg" alt="Croissant" class="clickable-image">
+<h3> Plain Croissant </h3>
+</div>
+
+<div class="image-container" data-description="A delicious pastry filled with a rich almond cream and topped with flaked almonds. May be served heated, or simply as it comes. ">
+<img src= "ACroissant.jpg" alt="Almond Croissant" class="clickable-image">
+<h3> Almond Croissant </h3>
+</div>
+
+<div class="image-container" data-description="Our Carrot Cake is a flavourful spiced cake, made with fresh, grated carrots, walnuts and cinnamon. This treat is topped with a layer of cream cheese frosting and a little carrot design.">
+<img src= "Carrot.jpg" alt="Carrot Cake" class="clickable-image">
+<h3> Carrot Cake </h3>
+</div>
+
+<div class="image-container" data-description="The Lemon Drizzle cake is a comforting and zesty treat that never disappoints. It contains a sweet and tangy lemon filling and is topped with a delicious sugar glaze.">
+<img src= "Lemon.jpg" alt="Lemon Drizzle Cake" class="clickable-image">
+<h3> Lemon Drizzle Cake </h3>
+</div>
+
+
+<div id="info-box" class="modal">
+<div class="modal-content">
+<p id= "modal-description"> </p>
+</div>
+</div>
+</main>
+
+<script>
+
+var images= document.querySelectorAll(".clickable-image");
+var modal= document.getElementById("info-box");
+var modalDescription = document.getElementById("modal-description");
+
+images.forEach(image => {
+var container = image.parentElement;
+var description= container.getAttribute("data-description");
+
+image.addEventListener("click", () => {
+alert(description);
+});
+});
+
+</script>
+
+
+
+
+</body>
+
+
+<br></br>
+<footer>
+<h4> Our Opening Hours </h4>
+<ul>
+<li><strong> Mon-Fri:</strong> 7AM - 2PM </li>
+<li><strong>Sat-Sun:</strong> 8AM - 3PM </li>
+</ul>
+
+</footer>
+
+
+
+
+
+
+</html>
